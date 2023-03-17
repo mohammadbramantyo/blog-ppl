@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+:root {
+  --main-white: #f6f5f5;
+  --main-orange: #ee6f57;
+  --main-grey: #CCD1E4;
+  --main-navy: #070d59;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', serif; 
+}
+article{
+    margin: 2rem 12rem;
+}
+
+article h2 {
+    font-size: 2rem;
+  }
+  
+  article p {
+    font-size: 1.2rem;
+  }
+  article h3{
+    font-size: 1.5rem;
+  }
+
+.img-container img{
+    max-width: 512px;
+    max-height: 512px;
+}
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+#main-title{
+    text-align: center;
+}
+
+main{
+    background-image: linear-gradient(to right,var(--main-grey),var(--main-white));
+    margin: auto;
+    padding: auto;
+  }

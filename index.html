@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome</title>
+    <link rel="stylesheet" href="style/style.css">
+    <title>PPL-Blog</title>
 </head>
 <body>
-    <h1>Test</h1>
+    <main>
+        <h1 id="main-title">Best Practice in Programming</h1>
+        <article>
+            <h2>Kenapa kita perlu menerapkan best practice?</h2>
+            <p>Sebagai seorang developer tentunya sudah menjadi tugas kita untuk dapat memenuhi ekspektasi maupun requirement yang diminta oleh client.
+                Namun terkadang developer sering dihadapi dengan deadline dan banyaknya workload sehingga pekerjaan dikerjakan dengan <span>yang penting jadi</span>.
+                Hal tersebut bisa menghasilkan code yang berantakan dan malah bisa menimbulkan masalah di kemudian hari. 
+            </p>
+            <p>Dengan menerapkan best practice pada programming kualitas kode tentunya dapat dijamin dan jika terdapat bugs dikemudian hari akan lebih mudah 
+                untuk menanganinya. Kode yang dibuat berdasarkan best practice juga lebih mudah untuk dibaca dan dipahami oleh orang lain sehingga dapat
+            memudahkan developer berikutnya yang akan mengembangkan kode tersebut. </p>
+        </article>
+        <article>
+            <h2>How to implement best practice</h2>
+            <p>Kode yang baik harus dapat memenuhi kriteria berikut: Maintainability, scalability, readability, dan portability. Ada beberapa hal yang 
+                dapat dilakukan untuk memastikan kode yang dihasilkan kualitasnya baik
+            </p>
+            <ol>
+                <li>Penamaan Variable</li>
+                <li>Comments</li>
+                <li>Reusability</li>
+                <li>Low coupling and high cohesion</li>
+                <li>Testing</li>
+            </ol>
+        </article>
+        <article>
+            <h3>Penamaan Variable</h3>
+            <p>Penamaan variable harus represntatif terhadap nilai yang dimilikinya sehingga ketika pertama kali dilihat dapat langsung diketahui kegunaan
+                variable tersebut. Hindari menggunakan singkatan-singkatan dan gunakan penamaan yang representatif sesuai dengan aturan penulisan Variable
+                pada bahasa pemrograman yang digunakan.
+            </p>
+            <div class="img-container">
+                <img src="img/variables.png" alt="">
+            </div>
+        </article>
+        <article>
+            <h3>Comments</h3>
+            <p>Comments bukan merupakan sesuatu yang fungsional namun dapat mempermudah developer dalam membaca dan memantain kode teresebut.
+                Tidak perlu memberikan komen pada sesuatu yang sudah obvious seperti menjelaskan variable ketika penamaan variable yang digunakan
+                sudah cukup representatif. Gunakan komen untuk menjelaskan baris kode/fungsi yang memang kompleks dan membutuhkan waktu untuk memahaminya jika
+                harus membaca keseluruhan kode. Dan pastikan komen tersebut memang membantu memahami kode dengan lebih cepat dan bukan menambah kompleksitas kode 
+            </p>
+        </article>
+        <article><h3>Reusability</h3>
+            <p>Don't Repeat yourself, kode dapat dibuat dalam bentuk fungsi ataupun dijadikan sebuah module agar dapat digunakan kembali</p>
+        </article>
+        <article>
+            <h3>Low coupling and high cohesion</h3>
+            <p>Low Coupling berarti memiliki sebuah kode atau fungsi memiliki ketergantungan yang rendah terhadap kode lain sementara high cohession 
+                berarti sebuah fungsi atau modul hanya berisi hal-hal yang berhubungan dengan modul tersebut saja. Hal ini dapat dpenuhi jika kita menerapkan
+            Single responsibilty principle, yang mana suatu fungsi hanya memiliki satu tujuan saja. Dapat dilihat pada fungsi berikut.</p>
+            <div class="img-container">
+                <img src="img/function_save.png" alt="">
+            </div>
+            <p>Fungsi tersebut melakukan dua hal yaitu memvalidasi sekaligus menyimpan data yang diterima. Alangkah baiknya jika validasi dilakukan dalam
+                fungsi tersendiri agar menerapkan Single responsibilty principle.
+            </p>
+            <div class="img-container">
+                <img src="img/function_small.png" alt="">
+            </div>
+            <p>Setelah dibuat fungsi validasi tersendiri sekarang fungsi save hanya melakukan saving answer dan untuk validasi diserahkan ke fungsi validate.
+                Dengan begitu sekarang fungsi save sudah menerapkan Single responsibilty principle.
+            </p>
+        </article>
+    </main>
+
 </body>
 </html>
